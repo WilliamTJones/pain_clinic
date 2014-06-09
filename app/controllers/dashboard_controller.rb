@@ -2,6 +2,9 @@ class DashboardController < ApplicationController
 
   def index
   	@user = current_user
+p "XXXXXXXXXXXXXXXXX"
+p @user
+
 		@user_permission = @user.user_permission.description
   end
 

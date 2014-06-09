@@ -7,9 +7,7 @@ class UsersController < ApplicationController
 
 
   def login
-    user = User.find_by_email_and_encrypted_password(params[:email], params[:password])
     if user.present?
-      session[:email] = params[:email]
       session[:id] = user.id
       redirect_to new_user_session
     else
@@ -19,7 +17,6 @@ class UsersController < ApplicationController
   end
 
   def logout
-    session[:email] = nil
     redirect_to destroy_user_session
   end
 
@@ -90,7 +87,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :passcode, :name)
+      params.require(:user).permit( :name)
     end
 
   # protected

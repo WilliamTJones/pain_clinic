@@ -1,5 +1,6 @@
 PainClinic::Application.routes.draw do
 
+  get "example/show"
   devise_for :users
   resources :patients, :has_many => :intakes
 
@@ -21,6 +22,9 @@ PainClinic::Application.routes.draw do
     get 'logout'
     post 'login'
   end
+
+  resource :examples, only: [:show], controller: 'examples'
+  
 
   resources :users
   resources :user_permissions

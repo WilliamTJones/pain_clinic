@@ -17,6 +17,7 @@ gem "twitter-bootstrap-rails"
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 gem 'factory_girl_rails'
 gem 'lazybox'
+gem 'fancybox2-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

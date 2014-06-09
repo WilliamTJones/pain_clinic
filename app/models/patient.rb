@@ -39,9 +39,6 @@ validates :marital_status, presence: true
     "#{first_name} #{last_name}"
   end
 
-  def NewTestingJenkins
-  end
-
   def self.patient_status(patient)
     patient.status_id != 4 ? patient.status_id += 1 : nil
   end

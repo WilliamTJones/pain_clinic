@@ -14,6 +14,7 @@
 //= require chartkick
 //= require lazybox
 //= require jquery
+//= require fancybox
 //= require jquery_ujs
 //= require jquery_nested_form
 //= require patients
@@ -22,3 +23,7 @@
 //= require turbolinks
 //= require bootstrap-datepicker
 //= require_tree .
+
+$(document).ready(function() {
+	$("a.fancybox").fancybox();
+});

@@ -6,6 +6,7 @@
 <div style='height:475px; margin:auto; padding:20px; width:100%;'>
 <div style="width: 40%; height:475px; float:left;"> 
 
+<% cache do  %>
 <p>
   <strong>Patient Last Name:</strong>
   <%= @patient.last_name %>
@@ -156,6 +157,6 @@
 
 </div>
 </div>
-
+<% end %>
 <%= link_to 'Dashboard', dashboard_index_path, :class => 'btn btn-primary active', :style => 'width: 120px;'  %> |
 <%= link_to 'Continue', doctors_dashboard_index_path, :class => 'btn btn-primary active', :style => 'width: 120px;'  %><br>

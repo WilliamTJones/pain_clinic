@@ -40,7 +40,7 @@ validates :marital_status, presence: true
   end
 
   def self.patient_status(patient)
-    patient.status_id != 4 ? patient.status_id += 1 : nil
+    patient.status_id != 4 ? patient.status_id += 1 : 0
   end
 
   def status_message

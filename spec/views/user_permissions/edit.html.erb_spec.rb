@@ -14,7 +14,6 @@ describe "user_permissions/edit" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form[action=?][method=?]", user_permission_path(@user_permission), "post" do
       assert_select "input#user_permission_description[name=?]", "user_permission[description]"
-      assert_select "input#user_permission_user_id[name=?]", "user_permission[user_id]"
     end
   end
 end

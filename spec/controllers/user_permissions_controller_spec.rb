@@ -61,43 +61,7 @@ describe UserPermissionsController do
     end
   end
 
-  describe "POST create" do
-    describe "with valid params" do
-      it "creates a new UserPermission" do
-        expect {
-          post :create, {:user_permission => valid_attributes}, valid_session
-        }.to change(UserPermission, :count).by(1)
-      end
-
-      it "assigns a newly created user_permission as @user_permission" do
-        post :create, {:user_permission => valid_attributes}, valid_session
-        assigns(:user_permission).should be_a(UserPermission)
-        assigns(:user_permission).should be_persisted
-      end
-
-      it "redirects to the created user_permission" do
-        post :create, {:user_permission => valid_attributes}, valid_session
-        response.should redirect_to(UserPermission.last)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns a newly created but unsaved user_permission as @user_permission" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        UserPermission.any_instance.stub(:save).and_return(false)
-        post :create, {:user_permission => { "description" => "invalid value" }}, valid_session
-        assigns(:user_permission).should be_a_new(UserPermission)
-      end
-
-      it "re-renders the 'new' template" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        UserPermission.any_instance.stub(:save).and_return(false)
-        post :create, {:user_permission => { "description" => "invalid value" }}, valid_session
-        response.should render_template("new")
-      end
-    end
-  end
-
+ 
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested user_permission" do

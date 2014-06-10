@@ -1,5 +1,6 @@
 class UserPermissionsController < ApplicationController
   before_action :set_user_permission, only: [:show, :edit, :update, :destroy]
+ 
 
   # GET /user_permissions
   # GET /user_permissions.json
